@@ -64,4 +64,10 @@ This project demonstrates that Variational Autoencoders can effectively learn co
 representations from audio features, enabling meaningful unsupervised clustering of music tracks.
 The current implementation provides a strong foundation that can be extended with multimodal
 features such as lyrics or metadata for richer music analysis.
+### Dataset Availability
+Due to dataset size constraints, the raw audio files are not included in this repository.
+The experiments were conducted using the GTZAN Genre Dataset, which is publicly available.
+After downloading the dataset, the audio files should be placed under `data/audio/` to
+reproduce the results.
+
 
