@@ -1,0 +1,61 @@
+Unsupervised Music Clustering using Variational Autoencoder (VAE)
+
+Dataset:
+- GTZAN Genre Dataset
+- Number of audio tracks: 1000
+- Audio features: MFCC (20 coefficients)
+
+Model:
+- Variational Autoencoder (VAE)
+- Latent dimension: 16
+
+Clustering:
+- Algorithm: K-Means
+- Number of clusters: 10
+
+Evaluation Metrics:
+- Silhouette Score: 0.2267
+- Calinski–Harabasz Index: 452.61
+
+Notes:
+- Latent representations were learned in an unsupervised manner.
+- Clustering was performed in the VAE latent space.
+- Metrics indicate meaningful structure in the learned representations.
+----------------------------------------
+Hybrid (Audio + Lyrics) Clustering Results
+
+Lyrics Features:
+- TF-IDF (max features: 30)
+
+Clustering Algorithms Evaluated:
+- K-Means
+- Agglomerative Clustering
+- DBSCAN
+
+Evaluation Metrics:
+- K-Means Silhouette Score: 0.4165
+- K-Means Davies-Bouldin Index: 1.0579
+- Agglomerative Silhouette Score: 0.3947
+- Agglomerative Davies-Bouldin Index: 1.1546
+
+Notes:
+- Hybrid features improved clustering quality compared to audio-only features.
+- DBSCAN produced noise or a single cluster, which is expected for density-based methods on high-dimensional data.
+----------------------------------------
+Hard Task: Beta-VAE (Disentangled Representation)
+
+Model:
+- Beta-VAE (β = 4)
+- Latent dimension: 16
+
+Clustering Algorithm:
+- K-Means (k = 10)
+
+Evaluation Metrics:
+- Silhouette Score: 0.1948
+- Calinski–Harabasz Index: 307.46
+- Davies–Bouldin Index: 1.3293
+
+Notes:
+- Beta-VAE encourages disentangled latent representations.
+- Lower clustering scores compared to standard VAE are expected due to increased emphasis on disentanglement.
